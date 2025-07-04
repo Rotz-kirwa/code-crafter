@@ -111,16 +111,102 @@ html {
 .p-6 { padding: 24px; }
 .p-8 { padding: 32px; }
 
+/* Navbar Responsive Styles */
+.desktop-nav {
+  display: flex;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+/* Mobile First Responsive Design */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  .section:first-child {
+    padding-top: 100px;
+  }
+  
+  .grid {
+    gap: 16px;
+  }
+  
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 14px 20px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 12px;
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+  
+  input, textarea, button {
+    font-size: 16px !important;
+    min-height: 44px;
+  }
+  
+  .card {
+    margin-bottom: 16px;
+  }
+  
+  .card {
+    padding: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
   }
   
   .section {
-    padding: 60px 0;
+    padding: 50px 0;
+  }
+  
+  .section:first-child {
+    padding-top: 110px;
   }
   
   .grid {
-    gap: 24px;
+    gap: 20px;
+  }
+  
+  .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

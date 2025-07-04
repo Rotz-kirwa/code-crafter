@@ -24,7 +24,7 @@ const Contact = () => {
     
     // Create WhatsApp message
     const message = `Hi! I'm ${formData.name}\n\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`;
-    const whatsappUrl = `https://wa.me/0791260817?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/254791260817?text=${encodeURIComponent(message)}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, '_blank');
@@ -78,7 +78,7 @@ const Contact = () => {
                 <MessageCircle style={{width: '24px', height: '24px', color: '#2563eb', marginRight: '16px'}} />
                 <div>
                   <h3 style={{fontWeight: '600'}}>WhatsApp</h3>
-                  <a href="https://wa.me/0791260817" style={{color: '#6b7280', textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">0791260817</a>
+                  <a href="https://wa.me/254791260817" style={{color: '#6b7280', textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">+254 791 260 817</a>
                 </div>
               </div>
               
@@ -102,7 +102,7 @@ const Contact = () => {
 
           <div style={{background: '#f9fafb', padding: '32px', borderRadius: '12px'}}>
             <form onSubmit={handleSubmit}>
-              <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px', marginBottom: '24px'}}>
+              <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px', marginBottom: '24px'}}>
                 <div>
                   <label htmlFor="name" style={{display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px'}}>
                     Name *

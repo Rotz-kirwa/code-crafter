@@ -75,7 +75,7 @@ const Navbar = () => {
             CodeCrafter
           </a>
 
-          <div style={{...desktopNavStyle, display: window.innerWidth >= 768 ? 'flex' : 'none'}}>
+          <div className="desktop-nav" style={desktopNavStyle}>
             {navigation.map((item) => (
               <a
                 key={item.name}
@@ -89,7 +89,8 @@ const Navbar = () => {
           </div>
 
           <button
-            style={{display: window.innerWidth < 768 ? 'block' : 'none', background: 'none', border: 'none', cursor: 'pointer'}}
+            className="mobile-menu-btn"
+            style={{background: 'none', border: 'none', cursor: 'pointer', padding: '8px'}}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}

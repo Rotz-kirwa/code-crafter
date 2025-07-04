@@ -40,17 +40,19 @@ const Home = () => {
   };
 
   const titleStyle = {
-    fontSize: '3.5rem',
+    fontSize: 'clamp(2rem, 8vw, 3.5rem)',
     fontWeight: 'bold',
     color: '#111827',
-    marginBottom: '24px'
+    marginBottom: '24px',
+    lineHeight: '1.2'
   };
 
   const buttonGroupStyle = {
     display: 'flex',
     gap: '16px',
     justifyContent: 'center',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    padding: '0 16px'
   };
 
   const serviceCardStyle = {
@@ -86,7 +88,7 @@ const Home = () => {
               Crafting Digital
               <span style={{color: '#2563eb'}}> Excellence</span>
             </h1>
-            <p style={{fontSize: '20px', color: '#1e40af', marginBottom: '32px', lineHeight: '1.6', fontWeight: '500'}}>
+            <p style={{fontSize: 'clamp(16px, 4vw, 20px)', color: '#1e40af', marginBottom: '32px', lineHeight: '1.6', fontWeight: '500', padding: '0 16px'}}>
               Professional web development services that transform your ideas into 
               powerful, scalable digital solutions. From concept to deployment.
             </p>
