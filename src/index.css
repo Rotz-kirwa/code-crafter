@@ -116,7 +116,7 @@ html {
   display: flex;
 }
 
-.mobile-menu-btn {
+.mobile-nav {
   display: none;
 }
 
@@ -125,8 +125,8 @@ html {
     display: none;
   }
   
-  .mobile-menu-btn {
-    display: block;
+  .mobile-nav {
+    display: flex;
   }
 }
 

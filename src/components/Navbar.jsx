@@ -87,30 +87,20 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-
-          <button
-            className="mobile-menu-btn"
-            style={{background: 'none', border: 'none', cursor: 'pointer', padding: '8px'}}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-
-        {isOpen && (
-          <div style={mobileMenuStyle}>
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                style={mobileLinkStyle}
-                onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-        )}
+        
+        <div className="mobile-nav" style={{display: 'flex', justifyContent: 'center', gap: '24px', paddingBottom: '16px'}}>
+          {navigation.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              style={{...linkStyle, fontSize: '14px'}}
+              onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
       </div>
     </nav>
   );
