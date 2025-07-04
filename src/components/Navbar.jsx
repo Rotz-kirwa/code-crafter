@@ -1,0 +1,118 @@
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navigation = [
+    { name: 'Projects', href: '#projects' },
+    { name: 'Pricing', href: '#pricing' },
+    { name: 'Contact', href: '#contact' },
+  ];
+
+  const navStyle = {
+    background: 'white',
+    boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+    position: 'fixed',
+    top: 0,
+    width: '100%',
+    zIndex: 50
+  };
+
+  const containerStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '16px 0'
+  };
+
+  const logoStyle = {
+    fontSize: '24px',
+    fontWeight: 'bold',
+    color: '#2563eb',
+    textDecoration: 'none'
+  };
+
+  const desktopNavStyle = {
+    display: 'flex',
+    gap: '32px'
+  };
+
+  const linkStyle = {
+    fontWeight: '500',
+    color: '#374151',
+    textDecoration: 'none',
+    transition: 'color 0.2s',
+    cursor: 'pointer'
+  };
+
+  const mobileMenuStyle = {
+    paddingBottom: '16px'
+  };
+
+  const mobileLinkStyle = {
+    display: 'block',
+    padding: '8px 0',
+    fontWeight: '500',
+    color: '#374151',
+    textDecoration: 'none',
+    cursor: 'pointer'
+  };
+
+  const scrollToSection = (href) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
+
+  return (
+    <nav style={navStyle}>
+      <div className="container">
+        <div style={containerStyle}>
+          <a href="#home" style={logoStyle} onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}>
+            CodeCrafter
+          </a>
+
+          <div style={{...desktopNavStyle, display: window.innerWidth >= 768 ? 'flex' : 'none'}}>
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                style={linkStyle}
+                onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+
+          <button
+            style={{display: window.innerWidth < 768 ? 'block' : 'none', background: 'none', border: 'none', cursor: 'pointer'}}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {isOpen && (
+          <div style={mobileMenuStyle}>
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                style={mobileLinkStyle}
+                onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
