@@ -122,11 +122,15 @@ html {
 
 @media (max-width: 768px) {
   .desktop-nav {
-    display: none;
+    display: none !important;
   }
   
   .mobile-nav {
     display: flex;
+  }
+  
+  .nav-container {
+    justify-content: center !important;
   }
 }
 

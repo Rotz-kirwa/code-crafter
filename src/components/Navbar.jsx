@@ -70,7 +70,7 @@ const Navbar = () => {
   return (
     <nav style={navStyle}>
       <div className="container">
-        <div style={containerStyle}>
+        <div className="nav-container" style={containerStyle}>
           <a href="#home" style={logoStyle} onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}>
             CodeCrafter
           </a>
