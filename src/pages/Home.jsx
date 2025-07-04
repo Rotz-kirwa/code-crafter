@@ -30,29 +30,34 @@ const Home = () => {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    padding: '80px 0'
+    padding: '100px 20px 80px 20px',
+    minHeight: '70vh',
+    display: 'flex',
+    alignItems: 'center'
   };
 
   const heroContentStyle = {
     textAlign: 'center',
-    maxWidth: '800px',
-    margin: '0 auto'
+    maxWidth: '900px',
+    margin: '0 auto',
+    width: '100%'
   };
 
   const titleStyle = {
-    fontSize: 'clamp(2rem, 8vw, 3.5rem)',
+    fontSize: 'clamp(2.2rem, 5vw, 4rem)',
     fontWeight: 'bold',
-    color: '#111827',
-    marginBottom: '24px',
-    lineHeight: '1.2'
+    marginBottom: '32px',
+    lineHeight: '1.2',
+    display: 'block',
+    overflow: 'visible'
   };
 
   const buttonGroupStyle = {
     display: 'flex',
-    gap: '16px',
+    gap: '20px',
     justifyContent: 'center',
     flexWrap: 'wrap',
-    padding: '0 16px'
+    marginTop: '40px'
   };
 
   const serviceCardStyle = {
@@ -85,10 +90,9 @@ const Home = () => {
         <div className="container">
           <div style={heroContentStyle}>
             <h1 style={{...titleStyle, color: '#1d4ed8'}}>
-              Crafting Digital
-              <span style={{color: '#2563eb'}}> Excellence</span>
+              Crafting Digital <span style={{color: '#2563eb'}}>Excellence</span>
             </h1>
-            <p style={{fontSize: 'clamp(16px, 4vw, 20px)', color: '#1e40af', marginBottom: '32px', lineHeight: '1.6', fontWeight: '500', padding: '0 16px'}}>
+            <p style={{fontSize: 'clamp(18px, 3vw, 22px)', color: '#1e40af', lineHeight: '1.7', fontWeight: '500', maxWidth: '700px', margin: '0 auto 40px auto'}}>
               Professional web development services that transform your ideas into 
               powerful, scalable digital solutions. From concept to deployment.
             </p>

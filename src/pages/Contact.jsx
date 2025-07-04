@@ -48,58 +48,6 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-2">
-          <div>
-            <h2 style={{fontSize: '24px', fontWeight: 'bold', color: '#111827', marginBottom: '24px'}}>
-              Let's Connect
-            </h2>
-            <p style={{color: '#6b7280', marginBottom: '32px'}}>
-              I'm always excited to work on new projects and collaborate with amazing people. 
-              Reach out and let's create something extraordinary together.
-            </p>
-
-            <div style={{marginBottom: '32px'}}>
-              <div style={{display: 'flex', alignItems: 'center', marginBottom: '24px'}}>
-                <Mail style={{width: '24px', height: '24px', color: '#2563eb', marginRight: '16px'}} />
-                <div>
-                  <h3 style={{fontWeight: '600'}}>Email</h3>
-                  <a href="mailto:gadielkirwa@gmail.com" style={{color: '#6b7280', textDecoration: 'none'}}>gadielkirwa@gmail.com</a>
-                </div>
-              </div>
-              
-              <div style={{display: 'flex', alignItems: 'center', marginBottom: '24px'}}>
-                <Phone style={{width: '24px', height: '24px', color: '#2563eb', marginRight: '16px'}} />
-                <div>
-                  <h3 style={{fontWeight: '600'}}>Phone</h3>
-                  <p style={{color: '#6b7280'}}>0791260817</p>
-                </div>
-              </div>
-              
-              <div style={{display: 'flex', alignItems: 'center', marginBottom: '24px'}}>
-                <MessageCircle style={{width: '24px', height: '24px', color: '#2563eb', marginRight: '16px'}} />
-                <div>
-                  <h3 style={{fontWeight: '600'}}>WhatsApp</h3>
-                  <a href="https://wa.me/254791260817" style={{color: '#6b7280', textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">+254 791 260 817</a>
-                </div>
-              </div>
-              
-              <div style={{display: 'flex', alignItems: 'center', marginBottom: '24px'}}>
-                <MapPin style={{width: '24px', height: '24px', color: '#2563eb', marginRight: '16px'}} />
-                <div>
-                  <h3 style={{fontWeight: '600'}}>Location</h3>
-                  <p style={{color: '#6b7280'}}>Remote & On-site Available</p>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 style={{fontWeight: '600', marginBottom: '16px'}}>Response Time</h3>
-              <p style={{color: '#6b7280'}}>
-                I typically respond to all inquiries within 24 hours. For urgent projects, 
-                please mention it in your message.
-              </p>
-            </div>
-          </div>
-
           <div style={{background: '#f9fafb', padding: '32px', borderRadius: '12px'}}>
             <form onSubmit={handleSubmit}>
               <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px', marginBottom: '24px'}}>
@@ -208,6 +156,58 @@ const Contact = () => {
                 </div>
               )}
             </form>
+          </div>
+
+          <div>
+            <h2 style={{fontSize: '24px', fontWeight: 'bold', color: '#111827', marginBottom: '24px'}}>
+              Let's Connect
+            </h2>
+            <p style={{color: '#6b7280', marginBottom: '32px'}}>
+              I'm always excited to work on new projects and collaborate with amazing people. 
+              Reach out and let's create something extraordinary together.
+            </p>
+
+            <div style={{marginBottom: '32px'}}>
+              <div style={{display: 'flex', alignItems: 'center', marginBottom: '24px'}}>
+                <Mail style={{width: '24px', height: '24px', color: '#2563eb', marginRight: '16px'}} />
+                <div>
+                  <h3 style={{fontWeight: '600'}}>Email</h3>
+                  <a href="mailto:gadielkirwa@gmail.com" style={{color: '#6b7280', textDecoration: 'none'}}>gadielkirwa@gmail.com</a>
+                </div>
+              </div>
+              
+              <div style={{display: 'flex', alignItems: 'center', marginBottom: '24px'}}>
+                <Phone style={{width: '24px', height: '24px', color: '#2563eb', marginRight: '16px'}} />
+                <div>
+                  <h3 style={{fontWeight: '600'}}>Phone</h3>
+                  <p style={{color: '#6b7280'}}>0791260817</p>
+                </div>
+              </div>
+              
+              <div style={{display: 'flex', alignItems: 'center', marginBottom: '24px'}}>
+                <MessageCircle style={{width: '24px', height: '24px', color: '#2563eb', marginRight: '16px'}} />
+                <div>
+                  <h3 style={{fontWeight: '600'}}>WhatsApp</h3>
+                  <a href="https://wa.me/254791260817" style={{color: '#6b7280', textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">+254 791 260 817</a>
+                </div>
+              </div>
+              
+              <div style={{display: 'flex', alignItems: 'center', marginBottom: '24px'}}>
+                <MapPin style={{width: '24px', height: '24px', color: '#2563eb', marginRight: '16px'}} />
+                <div>
+                  <h3 style={{fontWeight: '600'}}>Location</h3>
+                  <p style={{color: '#6b7280'}}>Remote & On-site Available</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 style={{fontWeight: '600', marginBottom: '16px'}}>Response Time</h3>
+              <p style={{color: '#6b7280'}}>
+                I typically respond to all inquiries within 24 hours. For urgent projects, 
+                please mention it in your message.
+              </p>
+            </div>
           </div>
         </div>
       </div>
