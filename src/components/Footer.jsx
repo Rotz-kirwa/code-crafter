@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const footerStyle = {
@@ -69,12 +69,6 @@ const Footer = () => {
               </a>
               <a href="https://www.linkedin.com/feed/?nis=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B8QPB%2BBuiQomeJO56s%2BzTEA%3D%3D" style={socialLinkStyle} target="_blank" rel="noopener noreferrer">
                 <Linkedin size={20} />
-              </a>
-              <a href="#" style={socialLinkStyle}>
-                <Twitter size={20} />
-              </a>
-              <a href="mailto:gadielkirwa@gmail.com" style={socialLinkStyle}>
-                <Mail size={20} />
               </a>
             </div>
           </div>
