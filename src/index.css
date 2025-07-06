@@ -111,6 +111,27 @@ html {
 .p-6 { padding: 24px; }
 .p-8 { padding: 32px; }
 
+/* Hero Section Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
 /* Navbar Responsive Styles */
 .desktop-nav {
   display: flex;

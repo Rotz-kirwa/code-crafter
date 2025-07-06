@@ -187,13 +187,62 @@ Don't view a website as a cost—see it as the smartest investment you'll make f
   };
 
   return (
-    <div className="section">
-      <div className="container">
-        <div className="text-center mb-16">
-          <h1 style={{fontSize: '2.5rem', fontWeight: 'bold', color: '#111827', marginBottom: '16px'}}>
-            Blog & Insights
+    <div className="section" style={{
+      background: `
+        linear-gradient(135deg, rgba(251, 146, 60, 0.7) 0%, rgba(245, 101, 101, 0.5) 50%, rgba(236, 72, 153, 0.3) 100%),
+        url('https://media.istockphoto.com/id/2134854336/photo/social-media-online-content-freelance-worker-working-online-content-creator-woman-using.webp?a=1&b=1&s=612x612&w=0&k=20&c=8Xh8n5aKNiCyr4nnMdzF_DIdC6H7WLqzvyxP0wWxElM=')
+      `,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed',
+      minHeight: '100vh',
+      position: 'relative',
+      overflow: 'hidden'
+    }}>
+      <div style={{
+        position: 'absolute',
+        top: '20%',
+        right: '8%',
+        width: '200px',
+        height: '200px',
+        background: 'linear-gradient(45deg, rgba(255,255,255,0.15), rgba(255,255,255,0.08))',
+        borderRadius: '50%',
+        filter: 'blur(2px)',
+        animation: 'float 6s ease-in-out infinite'
+      }}></div>
+      <div style={{
+        position: 'absolute',
+        bottom: '30%',
+        left: '10%',
+        width: '150px',
+        height: '150px',
+        background: 'linear-gradient(45deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06))',
+        borderRadius: '50%',
+        filter: 'blur(2px)',
+        animation: 'float 8s ease-in-out infinite reverse'
+      }}></div>
+      <div className="container" style={{position: 'relative', zIndex: 2}}>
+        <div className="text-center mb-16" style={{animation: 'fadeInUp 1s ease-out'}}>
+          <h1 style={{
+            fontSize: '3rem', 
+            fontWeight: 'bold', 
+            color: '#ffffff', 
+            marginBottom: '20px',
+            textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+            letterSpacing: '-0.02em'
+          }}>
+            Blog & <span style={{color: '#fbbf24', textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>Insights</span>
           </h1>
-          <p style={{fontSize: '20px', color: '#6b7280', maxWidth: '600px', margin: '0 auto'}}>
+          <p style={{
+            fontSize: '22px', 
+            color: '#f8fafc', 
+            maxWidth: '700px', 
+            margin: '0 auto',
+            lineHeight: '1.7',
+            textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
+            opacity: '0.95'
+          }}>
             Discover why having a website is crucial for your business success and 
             how it can transform your growth in today's digital world.
           </p>
@@ -201,43 +250,110 @@ Don't view a website as a cost—see it as the smartest investment you'll make f
 
         <div className="grid grid-3">
           {posts.map((post, index) => (
-            <article key={index} className="card">
+            <article 
+              key={index} 
+              className="card"
+              style={{
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9))',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.boxShadow = '0 25px 50px rgba(0,0,0,0.2)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+              }}
+            >
               <img 
                 src={post.image} 
                 alt={post.title}
-                style={{width: '100%', height: '200px', objectFit: 'cover'}}
+                style={{width: '100%', height: '220px', objectFit: 'cover', transition: 'transform 0.3s ease'}}
+                onMouseOver={(e) => {
+                  e.target.style.transform = 'scale(1.05)';
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.transform = 'scale(1)';
+                }}
               />
-              <div className="p-6">
-                <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px'}}>
-                  <span style={{background: '#dbeafe', color: '#1e40af', padding: '4px 12px', borderRadius: '20px', fontSize: '14px', fontWeight: '500'}}>
+              <div style={{padding: '32px'}}>
+                <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px'}}>
+                  <span style={{
+                    background: 'linear-gradient(135deg, #f59e0b, #d97706)', 
+                    color: 'white', 
+                    padding: '6px 16px', 
+                    borderRadius: '25px', 
+                    fontSize: '14px', 
+                    fontWeight: '600',
+                    boxShadow: '0 4px 12px rgba(245, 158, 11, 0.3)'
+                  }}>
                     {post.category}
                   </span>
-                  <div style={{display: 'flex', alignItems: 'center', color: '#6b7280', fontSize: '14px'}}>
+                  <div style={{display: 'flex', alignItems: 'center', color: '#92400e', fontSize: '14px', fontWeight: '500'}}>
                     <Clock style={{width: '16px', height: '16px', marginRight: '4px'}} />
                     {post.readTime}
                   </div>
                 </div>
                 
-                <h2 style={{fontSize: '20px', fontWeight: '600', color: '#111827', marginBottom: '12px', lineHeight: '1.4'}}>
+                <h2 style={{
+                  fontSize: '22px', 
+                  fontWeight: 'bold', 
+                  color: '#92400e', 
+                  marginBottom: '16px', 
+                  lineHeight: '1.3',
+                  textShadow: '1px 1px 2px rgba(0,0,0,0.05)'
+                }}>
                   {post.title}
                 </h2>
                 
-                <p style={{color: '#6b7280', marginBottom: '16px', lineHeight: '1.5'}}>
+                <p style={{
+                  color: '#a16207', 
+                  marginBottom: '20px', 
+                  lineHeight: '1.6',
+                  fontWeight: '500'
+                }}>
                   {post.excerpt}
                 </p>
                 
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-                  <div style={{display: 'flex', alignItems: 'center', color: '#6b7280', fontSize: '14px'}}>
+                  <div style={{display: 'flex', alignItems: 'center', color: '#92400e', fontSize: '14px', fontWeight: '500'}}>
                     <Calendar style={{width: '16px', height: '16px', marginRight: '4px'}} />
                     {formatDate(post.date)}
                   </div>
                   
                   <button 
                     onClick={() => setSelectedPost(post)}
-                    style={{display: 'flex', alignItems: 'center', color: '#2563eb', fontWeight: '500', background: 'none', border: 'none', cursor: 'pointer'}}
+                    style={{
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      color: 'white',
+                      background: 'linear-gradient(135deg, #f59e0b, #d97706)',
+                      padding: '10px 16px',
+                      borderRadius: '10px',
+                      fontWeight: '600', 
+                      border: 'none', 
+                      cursor: 'pointer',
+                      fontSize: '14px',
+                      boxShadow: '0 6px 15px rgba(245, 158, 11, 0.3)',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.transform = 'translateY(-2px)';
+                      e.target.style.boxShadow = '0 8px 20px rgba(245, 158, 11, 0.4)';
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.transform = 'translateY(0)';
+                      e.target.style.boxShadow = '0 6px 15px rgba(245, 158, 11, 0.3)';
+                    }}
                   >
                     Read More
-                    <ArrowRight style={{width: '16px', height: '16px', marginLeft: '4px'}} />
+                    <ArrowRight style={{width: '16px', height: '16px', marginLeft: '6px'}} />
                   </button>
                 </div>
               </div>
